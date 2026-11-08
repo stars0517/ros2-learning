@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'hello = demo1_py.hello:main',
         ],
     },
 )
