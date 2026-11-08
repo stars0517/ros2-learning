@@ -12,11 +12,11 @@ int main(int argc, char **argv){
 
     auto node = make_shared<rclcpp::Node>("hello");  //4.创建一个节点对象
 
-    RCLCPP_INFO(node->get_logger(),"Hello ROS2！");     //5.输出日志信息
+    RCLCPP_INFO(node->get_logger(),"Hello ROS2! 你好");     //5.输出日志信息
 
-    rclcpp::spin(node);
+    rclcpp::spin(node); //6.循环等待回调函数处理事件，直到节点被关闭
 
-    rclcpp::shutdown();
+    rclcpp::shutdown(); //7.关闭ROS节点
     return 0;
 }
 
