@@ -33,3 +33,9 @@ install(TARGETS
 )
 */
 
+//编译功能包
+//colcon build --packages-select demo1_cpp
+
+//运行功能包
+//ros2 run demo1_cpp my_node
+
