@@ -8,16 +8,16 @@ using namespace std;
 
 //2.编写main函数
 int main(int argc, char **argv){
-    rclcpp::init(argc, argv);           //3.初始化ROS节点
+  rclcpp::init(argc, argv);           //3.初始化ROS节点
 
-    auto node = make_shared<rclcpp::Node>("hello");  //4.创建一个节点对象
+  auto node = make_shared<rclcpp::Node>("hello");  //4.创建一个节点对象
 
-    RCLCPP_INFO(node->get_logger(),"Hello ROS2! 你好");     //5.输出日志信息
+  RCLCPP_INFO(node->get_logger(),"Hello ROS2! 你好");     //5.输出日志信息
 
-    rclcpp::spin(node); //6.循环等待回调函数处理事件，直到节点被关闭
+  rclcpp::spin(node); //6.循环等待回调函数处理事件，直到节点被关闭
 
-    rclcpp::shutdown(); //7.关闭ROS节点
-    return 0;
+  rclcpp::shutdown(); //7.关闭ROS节点
+  return 0;
 }
 
 //修改CmakeLists.txt文件

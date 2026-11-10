@@ -30,5 +30,9 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# 安装 launch 文件夹
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
 # 5. 结束符，必须在最后一行
 ament_package()
